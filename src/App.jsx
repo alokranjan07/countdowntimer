@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     if (isActive && !isPause && time > 0) {
-      // Clear any existing intervals before starting a new one
+     
       clearInterval(intervalRef.current);
       intervalRef.current = setInterval(() => {
         setTime((prev) => prev - 1);
@@ -40,7 +40,7 @@ function App() {
 
   const handlePause = () => {
     setPause(!isPause);
-    clearInterval(intervalRef.current); // Stop the timer immediately
+    clearInterval(intervalRef.current); 
   };
 
   const handleReset = () => {
